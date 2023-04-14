@@ -20,11 +20,12 @@ class Program
 
         string fullFileName = filePath + @"/" +  fileName;
         Console.WriteLine(fullFileName);
+        int counter = 1;
 
         while (true)
         {
            Console.Clear();
-           Console.WriteLine("What is the name of the student?");
+           Console.WriteLine("What is the name of student #"+ counter +" ?");
             string name = Console.ReadLine();
 
             Console.WriteLine("What percentage did they get?");
@@ -52,6 +53,9 @@ class Program
             Console.WriteLine("Would you like to log another result?");
             Console.WriteLine("Enter 1 to quit program");
             Console.WriteLine("Enter 2 to add another entry");
+
+
+            counter++;
             int answer = int.Parse(Console.ReadLine());
             if (answer == 1)
             {
